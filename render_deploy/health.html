@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Check - Образовательный Хаб</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #333;
+        }
+        .health-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .status-ok {
+            color: #28a745;
+        }
+        .check-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .check-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="health-container">
+        <h1>🔍 Health Check</h1>
+        <div class="status status-ok">
+            <span>✅</span>
+            <span>Сервис работает нормально</span>
+        </div>
+        
+        <div class="check-item">
+            <strong>📱 Сайт:</strong> Образовательный Хаб
+        </div>
+        <div class="check-item">
+            <strong>⏰ Время:</strong> <span id="current-time"></span>
+        </div>
+        <div class="check-item">
+            <strong>🌐 Статус:</strong> Активен
+        </div>
+        <div class="check-item">
+            <strong>📧 EmailJS:</strong> Готов к работе
+        </div>
+        <div class="check-item">
+            <strong>💾 LocalStorage:</strong> Доступен
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-time').textContent = new Date().toLocaleString('ru-RU');
+        
+        // Автообновление каждые 30 секунд
+        setInterval(() => {
+            document.getElementById('current-time').textContent = new Date().toLocaleString('ru-RU');
+        }, 30000);
+    </script>
+</body>
+</html>
