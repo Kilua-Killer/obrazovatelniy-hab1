@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Образовательный Хаб - Сервер
-Comment=Запуск сервера с автоперезапуском
-Exec=cmd /k "cd /d C:\proekt_bablo\render_deploy && node auto-restart.js"
-Icon=C:\proekt_bablo\render_deploy\logo.png
-Terminal=true
-Type=Application
